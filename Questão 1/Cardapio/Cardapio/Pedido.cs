@@ -57,12 +57,8 @@ namespace Cardapio
             //var json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\pedido.json");
             //var js = new DataContractJsonSerializer(typeof(List<Produto>));
             //var ms = new MemoryStream(Encoding.UTF8.GetBytes(json));*/
-            string Strpedido = string.Empty;
+            //string Strpedido = "";
 
-           /* foreach (var menu in pedidos)
-            {
-                Strpedido += $"(Codigo:{menu.cod}, Descrição:{menu.descricao}";
-            }*/
             var Json = JsonConvert.SerializeObject(pedidos, Formatting.Indented);
             //var Json = JsonConvert.SerializeObject(Strpedido, Formatting.Indented);
             //Console.WriteLine("{ \n" + Json + "\n Valor Total: " + vtotal + "\n}");
