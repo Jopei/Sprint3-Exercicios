@@ -21,8 +21,8 @@ namespace SistemaAgendamento.Test
                 .UseInMemoryDatabase("DbContext")//Usando a memoria
                 .Options;
             var motivo = new Infrastructure.DbContext(opcoes);
-            var repo = new RepositorioAgendamento(motivo);
-            var handler = new CadastraAgendamentoHandler(rp);
+            var repo = new RepositorioAgendamento(motivo);//Repositorio
+            var handler = new CadastraAgendamentoHandler(repo);
             handler.Execute(agd);//Enviando o Agendamento criado
             var oap = repo.ObtemAgendamentos(fim => fim.Titulo == "Titulo").FirstOrDefault();
 
