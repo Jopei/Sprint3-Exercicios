@@ -24,7 +24,7 @@ namespace SistemaAgendamento.Test
             var repo = new RepositorioAgendamento(motivo);
             var handler = new CadastraAgendamentoHandler(rp);
             handler.Execute(agd);//Enviando o Agendamento criado
-            var oap = repo.ObtemAgendamentosPorlidHandler(a => a.Titulo == "Titulo").FirstOrDefault();
+            var oap = repo.ObtemAgendamentos(fim => fim.Titulo == "Titulo").FirstOrDefault();
 
         }
     }
