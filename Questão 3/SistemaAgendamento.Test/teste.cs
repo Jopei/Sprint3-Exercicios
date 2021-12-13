@@ -48,7 +48,7 @@ namespace SistemaAgendamento.Test
                 mock.Verify(verifica => verifica.AtualizarAgendamentos(It.IsAny<AgendamentoModel[]>()), Times.Once());
             }
         }
-        /*private class FactAttribute : Attribute
+        /*private class FactAttribute : AtItribute
         {
         }*/
  }
